@@ -204,6 +204,11 @@ jobs:
           -DDART_MSVC_DEFAULT_OPTIONS=ON ^
           -DDART_VERBOSE=ON
         cmake --build . --target ALL_BUILD -- /maxcpucount:4
+    - name: Test
+      shell: cmd
+      run: |
+        ls
+        cmake --build . --target RUN_TESTS
         
   windows_2019_clang_cl:
     name: Windows (clang-cl) [Release]
@@ -235,3 +240,8 @@ jobs:
           -DDART_MSVC_DEFAULT_OPTIONS=ON ^
           -DDART_VERBOSE=ON
         cmake --build . --target ALL_BUILD
+    - name: Test
+      shell: cmd
+      run: |
+        ls
+        cmake --build . --target RUN_TESTS
