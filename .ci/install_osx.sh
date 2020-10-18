@@ -21,3 +21,7 @@ brew update > /dev/null
 pip3 install -U numpy pytest
 
 pip3 --version
+
+pip3 install -U numpy pytest
+
+pytest

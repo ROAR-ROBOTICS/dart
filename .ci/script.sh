@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -ex
 
+pip3 --version
+
+pip3 install -U numpy pytest
+
+pytest
+
 exit 0
 
 # Sanity checks for required environment variables.
