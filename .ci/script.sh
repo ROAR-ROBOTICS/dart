@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -ex
 
+exit 0
+
 # Sanity checks for required environment variables.
 if [ -z "$BUILD_TYPE" ]; then
   echo "Error: Environment variable BUILD_TYPE is unset."
@@ -102,8 +104,6 @@ cmake .. \
   ${install_prefix_option}
 
 if [ "$BUILD_DARTPY" = "ON" ]; then
-  # For debugging
-  pip3 install -U numpy pytest
   make -j$num_threads dartpy
   make pytest
 else
